@@ -1,0 +1,4 @@
+<html><body><pre>
+&nbsp;&nbsp;<span style="color: #33997E;">let</span> arr = <span style="color: #33997E;">new</span> Array(cols);
+
+</pre></body></html>
