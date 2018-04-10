@@ -2,7 +2,7 @@ Star[] stars = new Star[800];
 float speed;
 
 void settings(){
-  size(800, 800);
+  size(1080,1920);
 }
 void setup(){
   for(int i = 0; i< stars.length; i++){
@@ -10,7 +10,7 @@ void setup(){
   }
 }
 void draw(){
-  speed = map(mouseX,0, width,0 ,20);
+  speed = 15;
   background(0);
   translate(width/2,height/2);
   

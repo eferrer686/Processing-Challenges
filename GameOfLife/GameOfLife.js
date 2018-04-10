@@ -15,21 +15,13 @@ function setup() {
   createCanvas(1200,600);
   cols = width/resolution;
   rows = height/resolution;
+  reset();
   
-  grid = make2DArray(cols,rows);
-  for(let i = 0; i<cols; i++){
-    for(let j = 0; j<rows; j++){
-       grid[i][j] = floor(random(2)); 
-    }
-  }
 }
 
 function draw() {
   background(0);
-  
-  
-  
-  
+  mouseClick();
   for(let i = 0; i<cols; i++){
     for(let j = 0; j<rows; j++){
      
@@ -84,4 +76,18 @@ function countNeighbors(grid,x,y){
   }
   sum-=grid[x][y];
   return sum;
+}
+
+function mouseClick(){
+  if (mouseIsPressed) {
+    reset();
+  }
+}
+function reset(){
+  grid = make2DArray(cols,rows);
+  for(let i = 0; i<cols; i++){
+    for(let j = 0; j<rows; j++){
+       grid[i][j] = floor(random(2)); 
+    }
+  }
 }
